@@ -1,0 +1,16 @@
+spring:
+  config:
+    activate.on-profile: stockservice
+    name: stockservice-YAML
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    properties:
+      hibernate:
+        default_schema: public
+
+file:
+  extension-allowed: "JPG|PNG"
