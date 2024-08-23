@@ -14,3 +14,8 @@ spring:
 
 file:
   extension-allowed: "JPG,PNG"
+
+logging:
+  level:
+    org.springframework.web: "debug"
+    org.hibernate: "error"

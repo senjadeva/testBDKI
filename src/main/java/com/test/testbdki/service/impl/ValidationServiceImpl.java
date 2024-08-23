@@ -25,14 +25,11 @@ public class ValidationServiceImpl implements ValidationService {
 
         String fileType = fileUtil.getFileExtension();
 
-        System.out.println(fileType);
-
         String[] allowedTypes = fileExtensionAllowed.split(",");
         boolean allowed = Arrays.stream(allowedTypes).anyMatch(allowedType -> allowedType.equalsIgnoreCase(fileType));
         if (!allowed) {
             List<CustomError> errors = new ArrayList<>();
             errors.add(CustomError.builder().code("ERR0001").message("Invalid image extension").type(String.valueOf(HttpStatus.BAD_REQUEST.value())).build());
-            System.out.println("SINI");
             return errors;
         }
         return Collections.emptyList();

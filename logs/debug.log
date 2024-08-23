@@ -1,0 +1,4 @@
+2024-08-23 13:07:24- restartedMain - Starting TestBdkiApplication using Java 19.0.2 with PID 12464 (D:\Senja Numpang\Test BDKI\testBDKI\target\classes started by Metranet in D:\Senja Numpang\Test BDKI\testBDKI)
+2024-08-23 13:07:24- restartedMain - Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-08-23 13:07:24- restartedMain - The following 1 profile is active: "stockservice"
+2024-08-23 13:07:29- restartedMain - Started TestBdkiApplication in 5.94 seconds (process running for 7.361)
