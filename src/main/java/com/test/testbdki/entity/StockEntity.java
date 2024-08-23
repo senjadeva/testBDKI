@@ -1,11 +1,12 @@
 package com.test.testbdki.entity;
 
-import com.test.testbdki.config.AddisionalInfoAttributeConverter;
+import com.test.testbdki.model.JsonType;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.Type;
 import org.springframework.boot.configurationprocessor.json.JSONObject;
 
 import java.io.Serializable;
@@ -34,8 +35,8 @@ public class StockEntity implements Serializable {
     @Column(name = "no_seri_item")
     private String noSeriItem;
 
-    @Convert(converter = AddisionalInfoAttributeConverter.class)
     @Column(name = "additional_item")
+    @Type(JsonType.class)
     private JSONObject additionalInfo;
 
     @Column(name = "image_item")
@@ -52,4 +53,7 @@ public class StockEntity implements Serializable {
 
     @Column(name = "updated_by")
     private String updatedBy;
+
+    @Column(name = "additional_item_1")
+    private String additionalInfo1;
 }

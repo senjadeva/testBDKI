@@ -26,6 +26,7 @@ public class PostCreateStockServiceImpl implements PostCreateStockService {
                 .stockItem(request.getItemStock())
                 .noSeriItem(request.getNoSeriItem())
                 .additionalInfo(request.getAdditionalInfo())
+                .additionalInfo1(request.getAdditionalInfo().toString())
                 .imageItem(request.getItemImage())
                 .createdAt(new Timestamp(System.currentTimeMillis()))
                 .createdBy(request.getUserId())

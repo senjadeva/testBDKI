@@ -29,7 +29,8 @@ public class PostUpdateStockServiceImpl implements PostUpdateStockService {
             stockEntity.setImageItem(request.getItemImage());
             stockEntity.setItemName(request.getItemName());
             stockEntity.setNoSeriItem(request.getNoSeriItem());
-            stockEntity.setAdditionalInfo(request.getAdditionalInfo());
+//            stockEntity.setAdditionalInfo(request.getAdditionalInfo());
+            stockEntity.setAdditionalInfo1(request.getAdditionalInfo().toString());
             stockRepository.save(stockEntity);
         }
 

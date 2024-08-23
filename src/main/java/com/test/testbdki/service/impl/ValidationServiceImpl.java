@@ -15,7 +15,7 @@ import java.util.List;
 @Service
 public class ValidationServiceImpl implements ValidationService {
 
-    @Value("$file.extension-allowed")
+    @Value("${file.extension-allowed}")
     private String fileExtensionAllowed;
 
     @Override
