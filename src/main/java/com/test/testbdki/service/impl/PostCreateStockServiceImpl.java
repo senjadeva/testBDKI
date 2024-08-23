@@ -21,23 +21,19 @@ public class PostCreateStockServiceImpl implements PostCreateStockService {
     }
 
     @Override
-    public List<EmptyVO> createStock(CreateStock request){
-
-
+    public EmptyVO createStock(CreateStock request){
 
         StockEntity stockEntity = StockEntity.builder()
                 .itemName(request.getItemName())
                 .stockItem(request.getItemStock())
                 .noSeriItem(request.getNoSeriItem())
-                .additionalInfo(request.getAdditionalInfo())
+//                .additionalInfo(request.getAdditionalInfo())
                 .imageItem(request.getItemImage())
                 .createdAt(new Timestamp(System.currentTimeMillis()))
                 .createdBy(request.getUserId())
-                .updatedAt(new Timestamp(System.currentTimeMillis()))
-                .updatedBy(request.getUserId())
                 .build();
 
         stockRepository.save(stockEntity);
-        return Collections.singletonList(new EmptyVO());
+        return EmptyVO.builder().status("CREATED SUCCESS").build();
     }
 }

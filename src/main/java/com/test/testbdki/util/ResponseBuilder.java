@@ -10,9 +10,6 @@ import java.util.List;
 @Component
 public class ResponseBuilder<T> {
 
-    public ResponseBuilder(){
-    }
-
     public CustomResponse<T> buildResponse(List<T> payload, List<CustomError> errors){
 
         String correlationId = String.valueOf(System.currentTimeMillis());

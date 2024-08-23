@@ -3,9 +3,6 @@ package com.test.testbdki.service.impl;
 import com.test.testbdki.service.ValidationService;
 import org.springframework.beans.factory.annotation.Value;
 
-import java.io.File;
-import java.io.FilenameFilter;
-import java.nio.file.Files;
 
 public class ValidationServiceImpl implements ValidationService {
 
@@ -14,6 +11,6 @@ public class ValidationServiceImpl implements ValidationService {
 
     @Override
     public void checkExtentionFile(String imageItem) {
-        FilenameUtils
+
     }
 }

@@ -34,8 +34,8 @@ public class StockEntity implements Serializable {
     @Column(name = "no_seri_item")
     private String noSeriItem;
 
-    @Column(name = "additional_item", columnDefinition = "jsonb")
-    private HashMap<String, String> additionalInfo;
+//    @Column(name = "additional_item", columnDefinition = "jsonb")
+//    private HashMap<String, String> additionalInfo;
 
     @Column(name = "image_item")
     private String imageItem;

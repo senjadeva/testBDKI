@@ -1,6 +1,5 @@
-package com.test.testbdki.model.response;
+package com.test.testbdki.model.request;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -12,7 +11,8 @@ import java.io.Serializable;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class EmptyVO {
-    
-    private String status;
+public class DetailStock implements Serializable {
+
+    private Long id;
+
 }
