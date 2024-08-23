@@ -1,15 +1,15 @@
 package com.test.testbdki.entity;
 
+import com.test.testbdki.config.AddisionalInfoAttributeConverter;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.boot.configurationprocessor.json.JSONObject;
 
 import java.io.Serializable;
 import java.sql.Timestamp;
-import java.util.HashMap;
-import java.util.Map;
 
 @Data
 @Builder
@@ -34,8 +34,9 @@ public class StockEntity implements Serializable {
     @Column(name = "no_seri_item")
     private String noSeriItem;
 
-//    @Column(name = "additional_item", columnDefinition = "jsonb")
-//    private HashMap<String, String> additionalInfo;
+    @Convert(converter = AddisionalInfoAttributeConverter.class)
+    @Column(name = "additional_item")
+    private JSONObject additionalInfo;
 
     @Column(name = "image_item")
     private String imageItem;

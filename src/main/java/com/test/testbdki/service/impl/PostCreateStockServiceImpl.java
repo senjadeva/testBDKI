@@ -8,8 +8,6 @@ import com.test.testbdki.service.PostCreateStockService;
 import org.springframework.stereotype.Service;
 
 import java.sql.Timestamp;
-import java.util.Collections;
-import java.util.List;
 
 @Service
 public class PostCreateStockServiceImpl implements PostCreateStockService {
@@ -27,7 +25,7 @@ public class PostCreateStockServiceImpl implements PostCreateStockService {
                 .itemName(request.getItemName())
                 .stockItem(request.getItemStock())
                 .noSeriItem(request.getNoSeriItem())
-//                .additionalInfo(request.getAdditionalInfo())
+                .additionalInfo(request.getAdditionalInfo())
                 .imageItem(request.getItemImage())
                 .createdAt(new Timestamp(System.currentTimeMillis()))
                 .createdBy(request.getUserId())

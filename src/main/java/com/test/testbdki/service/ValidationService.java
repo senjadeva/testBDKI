@@ -1,6 +1,10 @@
 package com.test.testbdki.service;
 
+import com.test.testbdki.model.CustomError;
+
+import java.util.List;
+
 public interface ValidationService {
 
-    void checkExtentionFile(String fileName);
+    List<CustomError> checkExtentionFile(String fileName);
 }

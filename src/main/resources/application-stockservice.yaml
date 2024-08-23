@@ -13,4 +13,4 @@ spring:
         default_schema: public
 
 file:
-  extension-allowed: "JPG|PNG"
+  extension-allowed: "JPG,PNG"

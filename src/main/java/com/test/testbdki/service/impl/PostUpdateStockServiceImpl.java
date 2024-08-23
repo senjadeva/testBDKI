@@ -1,7 +1,6 @@
 package com.test.testbdki.service.impl;
 
 import com.test.testbdki.entity.StockEntity;
-import com.test.testbdki.model.request.CreateStock;
 import com.test.testbdki.model.request.UpdateStock;
 import com.test.testbdki.model.response.EmptyVO;
 import com.test.testbdki.repository.StockRepository;
@@ -9,7 +8,6 @@ import com.test.testbdki.service.PostUpdateStockService;
 import org.springframework.stereotype.Service;
 
 import java.sql.Timestamp;
-import java.util.Collections;
 
 @Service
 public class PostUpdateStockServiceImpl implements PostUpdateStockService {
@@ -31,9 +29,8 @@ public class PostUpdateStockServiceImpl implements PostUpdateStockService {
             stockEntity.setImageItem(request.getItemImage());
             stockEntity.setItemName(request.getItemName());
             stockEntity.setNoSeriItem(request.getNoSeriItem());
+            stockEntity.setAdditionalInfo(request.getAdditionalInfo());
             stockRepository.save(stockEntity);
-        } else {
-
         }
 
         return EmptyVO.builder().status("UPDATE SUCCESS").build();
